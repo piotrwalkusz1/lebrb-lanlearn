@@ -24,7 +24,7 @@ apply plugin: 'maven'
 
 
 group = 'com.piotrwalkusz.lebrb'
-version = '1.0.0'
+version = '1.0.1'
 
 
 allprojects {
@@ -43,8 +43,8 @@ dependencies {
     implementation group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.8.0', classifier: 'models'
     implementation group: 'org.languagetool', name: 'language-de', version: '3.9'
     implementation group: 'org.languagetool', name: 'language-en', version: '3.9'
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.0.2'
-    testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.0.2'
+    testCompileClasspath group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.0.2'
+    testRuntimeClasspath group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.0.2'
 }
 
 
