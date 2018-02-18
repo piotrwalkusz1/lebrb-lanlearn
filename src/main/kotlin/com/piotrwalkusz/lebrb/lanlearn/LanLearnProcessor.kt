@@ -5,7 +5,6 @@ import com.piotrwalkusz.lebrb.lanlearn.filereaders.PdfFileDecoder
 import com.piotrwalkusz.lebrb.lanlearn.filereaders.PlainTextFileDecoder
 import com.piotrwalkusz.lebrb.lanlearn.lemmatizers.LanguageToolLemmatizer
 import com.piotrwalkusz.lebrb.lanlearn.lemmatizers.Lemmatizer
-import com.piotrwalkusz.lebrb.lanlearn.lemmatizers.StanfordLemmatizer
 import com.piotrwalkusz.lebrb.lanlearn.wordsexporters.WordsExporter
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -21,7 +20,6 @@ class LanLearnProcessor {
             MediaType.PDF to PdfFileDecoder())
 
     private val lemmatizers: Map<Language, Lemmatizer> = mapOf(
-            Language.ENGLISH to StanfordLemmatizer(Language.ENGLISH),
             Language.GERMAN to LanguageToolLemmatizer(Language.GERMAN))
 
 
